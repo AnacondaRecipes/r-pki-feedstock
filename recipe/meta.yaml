@@ -39,13 +39,11 @@ requirements:
     - {{posix}}automake
     - {{posix}}pkg-config
     - {{posix}}make
-    - {{native}}openssl
     - r-base64enc
 
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
-    - {{native}}openssl
     - r-base64enc
 
 test:
