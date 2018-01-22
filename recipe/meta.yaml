@@ -10,8 +10,8 @@ package:
 source:
   fn: PKI_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/PKI_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/PKI/PKI_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/PKI_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/PKI/PKI_{{ version }}.tar.gz
   sha256: d2f76d17388aae17695073e97693174941ce64805e70cfceb57dc2cf569743f7
 
 
