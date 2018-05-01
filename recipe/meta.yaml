@@ -14,22 +14,15 @@ source:
     - {{ cran_mirror }}/src/contrib/Archive/PKI/PKI_{{ version }}.tar.gz
   sha256: d2f76d17388aae17695073e97693174941ce64805e70cfceb57dc2cf569743f7
 
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
-
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
 
-
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
-
 
 requirements:
   build:
