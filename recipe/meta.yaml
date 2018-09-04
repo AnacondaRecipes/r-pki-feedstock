@@ -8,7 +8,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: PKI_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/PKI_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PKI/PKI_{{ version }}.tar.gz
@@ -32,10 +31,12 @@ requirements:
     - {{posix}}sed               # [win]
     - {{posix}}grep              # [win]
     - {{posix}}autoconf
-    - {{posix}}automake-wrapper  # [win]
     - {{posix}}automake          # [not win]
+    - {{posix}}automake-wrapper  # [win]
     - {{posix}}pkg-config
     - {{posix}}make
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
 
   host:
     - r-base
