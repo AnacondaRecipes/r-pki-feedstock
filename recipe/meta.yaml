@@ -8,10 +8,12 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  url:
-    - {{ cran_mirror }}/src/contrib/PKI_{{ version }}.tar.gz
-    - {{ cran_mirror }}/src/contrib/Archive/PKI/PKI_{{ version }}.tar.gz
-  sha256: d2f76d17388aae17695073e97693174941ce64805e70cfceb57dc2cf569743f7
+  - url:
+      - {{ cran_mirror }}/src/contrib/PKI_{{ version }}.tar.gz
+      - {{ cran_mirror }}/src/contrib/Archive/PKI/PKI_{{ version }}.tar.gz
+    sha256: d2f76d17388aae17695073e97693174941ce64805e70cfceb57dc2cf569743f7
+  - url: https://www.openssl.org/source/openssl-1.0.2p.tar.gz  # [win]
+    folder: src/win32  # [win]
 
 build:
   merge_build_host: True  # [win]
